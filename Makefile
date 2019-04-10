@@ -1,8 +1,8 @@
-thecommand: main.o watcher.o
+thecommand: main watcher
 	ls
 
 main: SharedGrid.hpp
-	g++ -o main main.cpp -lrt -pthread
+	g++ -o bin/main main.cpp -lrt -pthread
 
 watcher: SharedGrid.hpp
-	g++ -o watcher watcher.cpp -lrt -pthread
+	g++ -o bin/watcher watcher.cpp -lrt -pthread
